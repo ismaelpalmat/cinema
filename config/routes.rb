@@ -25,5 +25,4 @@ Rails.application.routes.draw do
   get "movie", to: redirect("/", status: 301)
   get "serie", to: redirect("/", status: 301)
   get "documentary_film", to: redirect("/", status: 301)
-
 end
