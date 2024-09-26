@@ -1,0 +1,17 @@
+<br><h1 class=container>Lista de Películas</h1>
+
+<div class="container mt-4">
+  <div class="list-group">
+    <% @movies.each do |movie| %>
+      <div class="list-group-item">
+        <h5 class="mb-1"><strong>Nombre:</strong> <%= movie.name %></h5>
+        <p class="mb-1"><strong>Sinopsis:</strong> <%= movie.synopsis %></p>
+        <p><strong>Director:</strong> <%= movie.director %></p>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="mt-3">
+    <%= link_to 'Ingresar película', new_movie_path, class: 'btn btn-primary' %>
+  </div>
+</div>

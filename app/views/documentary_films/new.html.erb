@@ -1,0 +1,25 @@
+
+
+<%= form_with(model: @documentary_film, local: true) do |form| %>
+  <div class="container mt-4">
+    <h2>Crear un nuevo documental</h2>
+    <div class="form-group">
+      <%= form.label :name, "Nombre del documental", class: "form-label" %>
+      <%= form.text_field :name, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= form.label :synopsis, "Sinopsis", class: "form-label" %>
+      <%= form.text_area :synopsis, class: "form-control", rows: 4 %>
+    </div>
+
+    <div class="form-group">
+      <%= form.label :director, "Director", class: "form-label" %>
+      <%= form.text_field :director, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= form.submit "Ingresar documental", class: "btn btn-primary" %>
+    </div>
+  </div>
+<% end %>

@@ -1,0 +1,18 @@
+<br>
+<h1 class="container">Lista de Documentales</h1>
+
+<div class="container mt-4">
+  <div class="list-group">
+    <% @documentary_films.each do |documentary_film| %>
+      <div class="list-group-item">
+        <h5 class="mb-1"><strong>Nombre:</strong> <%= documentary_film.name %></h5>
+        <p class="mb-1"><strong>Sinopsis:</strong> <%= documentary_film.synopsis %></p>
+        <p><strong>Director:</strong> <%= documentary_film.director %></p>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="mt-3">
+    <%= link_to 'Agregar nuevo documental', documentary_films_new_path, class: 'btn btn-primary' %>
+  </div>
+</div>
